@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="ipad10_2" orientation="portrait" layout="fullscreen" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ViewPagerDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1FT-kL-M5d">
+                        <rect key="frame" x="0.0" y="0.0" width="810" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="H3t-mi-hoN">
+                                <rect key="frame" x="0.0" y="0.0" width="810" height="1080"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <viewLayoutGuide key="contentLayoutGuide" id="81R-Kh-6hf"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="GAU-mm-E0V"/>
+                            </scrollView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Ws-qh-p9t">
+                                <rect key="frame" x="0.0" y="930" width="810" height="150"/>
+                                <subviews>
+                                    <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="gv8-Vp-Vp6">
+                                        <rect key="frame" x="355" y="5" width="100" height="40"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="55h-mq-JoC"/>
+                                            <constraint firstAttribute="width" constant="100" id="WmG-j9-Vxt"/>
+                                        </constraints>
+                                        <color key="pageIndicatorTintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="currentPageIndicatorTintColor" red="0.9965168834" green="0.70884579420000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </pageControl>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cvo-40-ocE">
+                                        <rect key="frame" x="10" y="70" width="790" height="50"/>
+                                        <color key="backgroundColor" red="0.9965168834" green="0.70884579420000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="Svr-qn-OYJ"/>
+                                        </constraints>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <inset key="imageEdgeInsets" minX="150" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="Done" image="arrowtriangle.right" catalog="system">
+                                            <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="13g-Zd-f2i"/>
+                                    <constraint firstItem="cvo-40-ocE" firstAttribute="leading" secondItem="2Ws-qh-p9t" secondAttribute="leading" constant="10" id="2yC-ld-MJd"/>
+                                    <constraint firstItem="cvo-40-ocE" firstAttribute="centerX" secondItem="2Ws-qh-p9t" secondAttribute="centerX" id="6of-2p-gnk"/>
+                                    <constraint firstItem="gv8-Vp-Vp6" firstAttribute="top" secondItem="2Ws-qh-p9t" secondAttribute="top" constant="5" id="JNX-SA-MCp"/>
+                                    <constraint firstAttribute="bottom" secondItem="cvo-40-ocE" secondAttribute="bottom" constant="30" id="Mvk-bq-3Jb"/>
+                                    <constraint firstAttribute="trailing" secondItem="cvo-40-ocE" secondAttribute="trailing" constant="10" id="Veo-sY-Ode"/>
+                                    <constraint firstItem="gv8-Vp-Vp6" firstAttribute="centerX" secondItem="2Ws-qh-p9t" secondAttribute="centerX" id="acI-UH-Hfi"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.9965168834" green="0.70884579420000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="2Ws-qh-p9t" firstAttribute="centerX" secondItem="1FT-kL-M5d" secondAttribute="centerX" id="FE2-vb-bfc"/>
+                            <constraint firstItem="qGO-5X-hnh" firstAttribute="trailing" secondItem="2Ws-qh-p9t" secondAttribute="trailing" id="LZq-Vn-qbI"/>
+                            <constraint firstAttribute="bottom" secondItem="2Ws-qh-p9t" secondAttribute="bottom" id="eLF-EP-iym"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="qGO-5X-hnh"/>
+                    </view>
+                    <connections>
+                        <outlet property="pageControl" destination="gv8-Vp-Vp6" id="8P9-CI-kp5"/>
+                        <outlet property="scrollView" destination="H3t-mi-hoN" id="IER-yx-grI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="113.79310344827587"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="arrowtriangle.right" catalog="system" width="64" height="56"/>
+    </resources>
+</document>
